@@ -1,187 +1,158 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>ãäæí ˜Çİå ÇÑÓÇ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ÓÇíÊ İÑæÔÇåí</title>
   <style>
     body {
-      direction: rtl;
-      font-family: sans-serif;
-      background-color: #fff8f0;
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 2rem;
-      color: #333;
-    }
-    h2 {
-      font-size: 1.8rem;
-      background-color: #f5e0c8;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-    }
-    h2::before {
-      content: "?";
-      margin-left: 10px;
-    }
-    ul {
-      list-style: none;
       padding: 0;
+      background-color: #f1f1f1;
+      color: #333;
+      overflow-x: hidden;
     }
-    li {
-      padding: 8px 0;
-      border-bottom: 1px solid #e0d8d0;
-      font-size: 1.1rem;
+    header {
+      background-color: #4e4e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
     }
-    .section {
-      margin-bottom: 30px;
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    nav {
+      background-color: #c0a080;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .item {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+    .item:hover {
+      transform: scale(1.05);
+    }
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .item h2 {
+      color: #4e4e50;
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+    .item p {
+      font-size: 1em;
+      color: #777;
+      margin: 10px 0;
+    }
+    .item .price {
+      font-size: 1.2em;
+      color: #c0a080;
+      font-weight: bold;
+    }
+    .buy-button {
+      background-color: #c0a080;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .buy-button:hover {
+      background-color: #8b6a4d;
+    }
+    footer {
+      background-color: #4e4e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    /* Motion effects */
+    section {
+      transform: translateY(0);
+    }
+    section:hover {
+      transform: translateY(-10px);
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>İÑæÔÇå ÂäáÇíä</h1>
+  </header>
+ 
+  <nav>
+    <a href="#home">ÎÇäå</a>
+    <a href="#items">ÂíÊãåÇ</a>
+    <a href="#payment">ÏÑÇå ÑÏÇÎÊ</a>
+  </nav>
+ 
+  <section id="items">
+    <!-- Şåæå -->
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Espresso Arabica Single">
+      <h2>* ÇÓÑÓæ ÚÑÈí˜Ç (Óíäá) *</h2>
+      <p>ÇÓÑÓæ ÚÑÈí˜Ç ÈÇ ØÚãí ÈíäÙíÑ</p>
+      <p class="price">90T</p>
+      <button class="buy-button">ÎÑíÏ</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Espresso Arabica Double">
+      <h2>* ÇÓÑÓæ ÚÑÈí˜Ç (ÏÈá) *</h2>
+      <p>ÇÓÑÓæ ÏÈá ÈÑÇí ØÑİÏÇÑÇä ØÚã ŞæíÊÑ</p>
+      <p class="price">110T</p>
+      <button class="buy-button">ÎÑíÏ</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Espresso 60-40">
+      <h2>* ÇÓÑÓæ 60-40 *</h2>
+      <p>ÊÑ˜íÈ ÇÓÑÓæ ÚÑÈí˜Ç æ ÑÈæÓÊÇ</p>
+      <p class="price">75T</p>
+      <button class="buy-button">ÎÑíÏ</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Espresso Robusta Single">
+      <h2>* ÇÓÑÓæ ÑÈæÓÊÇ (Óíäá) *</h2>
+      <p>ÇÓÑÓæ ÑÈæÓÊÇ ÈÇ ØÚãí ŞæíÊÑ</p>
+      <p class="price">50T</p>
+      <button class="buy-button">ÎÑíÏ</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Americano Arabica">
+      <h2>* ÂãÑí˜äæ ÚÑÈí˜Ç *</h2>
+      <p>ÂãÑí˜äæ ÚÑÈí˜Ç ÈÑÇí ˜ÓÇäí ˜å ØÚã ãáÇíã ãíÎæÇåäÏ</p>
+      <p class="price">105T</p>
+      <button class="buy-button">ÎÑíÏ</button>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/300" alt="Cappuccino">
+      <h2>* ˜Çæíäæ *</h2>
+      <p>˜
 
-  <h1 style="text-align:center;">ãäæí ˜Çİå ÇÑÓÇ</h1>
-
-  <div class="section">
-    <h2>*Şåæå*</h2>
-    <ul>
-      <li>ÇÓÑÓæ ÚÑÈí˜Ç (Óíäá) - 90T</li>
-      <li>ÇÓÑÓæ ÚÑÈí˜Ç (ÏÈá) - 110T</li>
-      <li>ÇÓÑÓæ 60-40 - 75T</li>
-      <li>ÇÓÑÓæ 60-40 - 85T</li>
-      <li>ÇÓÑÓæ ÑÈæÓÊÇ (Óíäá) - 50T</li>
-      <li>ÇÓÑÓæ ÑÈæÓÊÇ (ÏÈá) - 60T</li>
-      <li>ÂãÑí˜Çäæ ÚÑÈí˜Ç - 105T</li>
-      <li>ÂãÑí˜Çäæ 60-40 - 90T</li>
-      <li>ÂãÑí˜Çäæ ÑÈæÓÊÇ - 65T</li>
-      <li>˜Çæíäæ - 100T</li>
-      <li>äÓ˜Çİå - 100T</li>
-      <li>ÔíÑ˜Ç˜ÇÆæ - 100T</li>
-      <li>áÇÊå - 110T</li>
-      <li>ãæ˜Ç - 130T</li>
-      <li>˜ÇÑÇãá ãÇ˜íÇÊæ - 130T</li>
-      <li>åÇÊ Ç˜áÊ - 130T</li>
-      <li>æÇíÊ Ç˜áÊ - 130T</li>
-      <li>íä˜ Ç˜áÊ - 130T</li>
-      <li>Ô˜áÇÊ İäÏŞ - 130T</li>
-      <li>ãæ˜ÇÊáÇ (ãæ˜Ç + äæÊáÇ) - 160T</li>
-      <li>ØÚã ÏåäÏå - 25T</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*Şåæå Ïãí*</h2>
-    <ul>
-      <li>Şåæå İÑÇäÓå - 80T</li>
-      <li>Şåæå ÊÑ˜ - 90T</li>
-      <li>Şåæå íæäÇäí - 100T</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*Çí æ ÏãäæÔ*</h2>
-    <ul>
-      <li>Çí ÓíÇå - 60T</li>
-      <li>Çí ÓÈÒ - 75T</li>
-      <li>Çí ÊÑÔ - 75T</li>
-      <li>Çí ÂáÈÇáæ - 80T</li>
-      <li>Çí ÇäáíÓí - 80T</li>
-      <li>Çí ˜Ñ˜ - 100T</li>
-      <li>Çí ãÇÓÇáÇ - 100T</li>
-      <li>Çí ÇÓÇíÓí - 100T</li>
-      <li>ÏãäæÔ ÈåÇÑ äÇÑäÌ - 80T</li>
-      <li>ÏãäæÔ äíÑ˜ - 80T</li>
-      <li>ÏãäæÔ Èå áíãæ - 80T</li>
-      <li>ÏãäæÔ á ÇæÒÈÇä - 85T</li>
-      <li>ÏãäæÔ ÑÊŞÇá ÏÇÑíä - 90T</li>
-      <li>ÏãäæÔ ÓÑãÇÎæÑÏí - 90T</li>
-      <li>ÏãäæÔ ÓíÈ ÏÇÑíä - 110T</li>
-      <li>ÏãäæÔ ÏáÎæÇå - 120T</li>
-      <li>ÏãäæÔ ÒÚİÑÇä - 150T</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*ÈÇÑÓÑÏ*</h2>
-    <ul>
-      <li>áíãæäÇÏ - 110T</li>
-      <li>ãæåíÊæ - 120T</li>
-      <li>ÑÏãæåíÊæ - 130T</li>
-      <li>ÈáæãÇäÓÊÑ - 90T</li>
-      <li>ÂäÇäÇÓ ˜æáÑ - 110T</li>
-      <li>ÑÊÛÇáíäæ - 110T</li>
-      <li>Çã ÈáíÊ - 110T</li>
-      <li>˜ÇáãÇ˜ - 110T</li>
-      <li>ÇäÑí áÇÓ - 110T</li>
-      <li>ÊæÊ İÑäí - 130T</li>
-      <li>Ôæ˜æ İÑæÊ - 130T</li>
-      <li>áæÇÔ˜ - 130T</li>
-      <li>ÎíÇÑ áíãæäÊ - 130T</li>
-      <li>ãæÒ Ô˜áÇÊ - 150T</li>
-      <li>íÔäåÇÏ ÈÇÑ ÊäÏÑ - 160T</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*Şåæå ÓÑÏ*</h2>
-    <ul>
-      <li>ÂíÓ ÂãÑí˜Çäæ - 85T</li>
-      <li>˜áÏÈÑæ - 120T</li>
-      <li>ÂíÓ áÇÊå - 130T</li>
-      <li>ÂİæÇÊæ - 135T</li>
-      <li>ÂíÓ ãæ˜Ç - 150T</li>
-      <li>ÂíÓ ˜ÇÑÇãá ãÇ˜íÇÊæ - 150T</li>
-      <li>ÂíÓ íä˜ - 150T</li>
-      <li>ÂíÓ ãæ˜Ç äÚäÇíí - 160T</li>
-      <li>ÂİæÇÊæ áÇÓ - 180T</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*Ôí˜*</h2>
-    <ul>
-      <li>Ôí˜ æÇäíá - 150T</li>
-      <li>Ôí˜ Ô˜áÇÊ - 150T</li>
-      <li>Ôí˜ ÊæÊ İÑäí - 150T</li>
-      <li>Ôí˜ ãæÒ - 150T</li>
-      <li>Ôí˜ ÔÇÊæÊ - 150T</li>
-      <li>Ôí˜ ãæÒ Ô˜áÇÊ - 165T</li>
-      <li>Ôí˜ Ô˜áÇÊ Ê˜åÇí - 175T</li>
-      <li>Ôí˜ ÇÓÑÓæ - 180T</li>
-      <li>Ôí˜ äÓ˜Çİå - 180T</li>
-      <li>Ôí˜ ˜Ñå ÈÇÏÇã Òãíäí - 180T</li>
-      <li>Ôí˜ ÈíÓ˜æíÊ áæÊæÓ - 200T</li>
-      <li>Ôí˜ äæÊáÇ - 200T</li>
-      <li>Ôí˜ ˜Ñå ÈÇÏÇã + äæÊáÇ - 220T</li>
-      <li>Ôí˜ ãæÒ ÓÊå - 230T</li>
-      <li>ÈÔŞÇÈ ÈÓÊäí - ŞíãÊ ÊæÇİŞí</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*ÏÓÑ*</h2>
-    <ul>
-      <li>ÑÔÊå - 50T</li>
-      <li>ÎÔ˜ÇÑ - 60T</li>
-      <li>ãæí - 95T</li>
-      <li>˜í˜ ÑæÒ</li>
-      <li>˜æäÇİå ÈÓÊäí</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>*ÕÈÍÇäå æ ÚÕÑÇäå*</h2>
-    <ul>
-      <li>ÇãáÊ ŞÇÑ - 140T</li>
-      <li>ÇãáÊ ÇÓİäÇÌ - 110T</li>
-      <li>ÇãáÊ æÌå - 110T</li>
-      <li>ÇãáÊ ÓæÓíÓ - 110T</li>
-      <li>ÇãáÊ ÇæÑäÌ áÇæ - 130T</li>
-      <li>ÇãáÊ ?×? - 170T</li>
-      <li>íÔäåÇÏ æíå</li>
-    </ul>
-  </div>
-
-</body>
-</html>
